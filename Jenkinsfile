@@ -10,6 +10,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'make'
+                sh './hello.exe'
             }
         }
         stage('Unit Test') {
