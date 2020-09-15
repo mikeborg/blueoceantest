@@ -16,7 +16,7 @@ pipeline {
                 echo 'Unit Testing...'
             }
         }
-        stage('Flash Micro') {
+        stage('Flash') {
             steps {
                 echo 'Flash Microcontroller...'
             }
