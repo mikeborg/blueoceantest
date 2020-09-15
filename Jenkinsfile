@@ -1,19 +1,35 @@
 pipeline {
     agent any
     stages {
+        stage('Static Analysis') {
+            steps {
+                echo 'Static Code Analysis..'
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Building..'
             }
         }
-        stage('StaticCodeAnalysis') {
-            steps {
-                echo 'Static Code Analysis..'
-            }
-        }
-        stage('UnitTest') {
+        stage('Unit Test') {
             steps {
                 echo 'Unit Testing...'
+            }
+        }
+        stage('Flash Micro') {
+            steps {
+                echo 'Flash Microcontroller...'
+            }
+        }
+        stage('Blackbox') {
+            steps {
+                echo 'Blockbox Testing...'
+            }
+        }
+        stage('Accept & Merge')
+        {
+            steps {
+                echo 'Pull Request'
             }
         }
     }
