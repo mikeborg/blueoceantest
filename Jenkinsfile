@@ -2,13 +2,19 @@ pipeline {
     agent any
     stages {
         stage('Build') {
-            echo 'Building..'
+            steps {
+                echo 'Building..'
+            }
         }
         stage('StaticCodeAnalysis') {
-            echo 'Static Code Analysis..'
+            steps {
+                echo 'Static Code Analysis..'
+            }
         }
         stage('UnitTest') {
-            echo 'Unit Testing...'
+            steps {
+                echo 'Unit Testing...'
+            }
         }
     }
 }
